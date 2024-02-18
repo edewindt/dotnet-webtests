@@ -23,3 +23,4 @@ C:\Users\Edewi\Documents\projects\dotnet\test\obj\Debug\net8.0\refint\test.dll
 C:\Users\Edewi\Documents\projects\dotnet\test\obj\Debug\net8.0\test.pdb
 C:\Users\Edewi\Documents\projects\dotnet\test\obj\Debug\net8.0\test.genruntimeconfig.cache
 C:\Users\Edewi\Documents\projects\dotnet\test\obj\Debug\net8.0\ref\test.dll
+C:\Users\Edewi\Documents\projects\dotnet\test\obj\Debug\net8.0\test.sourcelink.json
