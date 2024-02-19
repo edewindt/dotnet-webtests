@@ -1,19 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddTransient<CustomMiddleware>();
 var app = builder.Build();
 
-app.UseWhen(ctx => ctx.Request.Query.ContainsKey("user"),
-    app =>
+app.UseRouting();
+
+app.UseEndpoints(endpoints =>
+{
+    _ = endpoints.MapGet("first/{name},{secondname}", async (ctx) =>
     {
-        app.Use(async (ctx, next) =>
-        {
-            var namae = ctx.Request.Query["user"];
-            await ctx.Response.WriteAsync($"{namae}");
-            await next();
-        });
-
+        var firstname = Convert.ToString(ctx.Request.RouteValues["name"]);
+        var secondname = Convert.ToString(ctx.Request.RouteValues["secondname"]);
+        await ctx.Response.WriteAsync($"{firstname} {secondname}");
     });
-app.DoIt();
-
-
+});
 app.Run();
