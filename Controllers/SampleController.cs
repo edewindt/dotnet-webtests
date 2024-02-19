@@ -1,11 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
+
 [Controller]
-public class SampleController
+public class SampleController : Controller
 {
     [Route("/")]
-    public ContentResult Index() => new ContentResult() { ContentType = "text/html", Content = "<h1>Home PAGEO</h1>" };
+    public ContentResult Index() => Content("<h1>Home PAGEO</h1>", "text/html");
+
     [Route("/about")]
-    public ContentResult About() => new ContentResult() { ContentType = "text/plain", Content = "{\"About\":\"SkillIssue\"}" };
+    public ContentResult About() => Content("{\"About\":\"SkillIssue\"}", "text/plain");
+
     [Route("/contact")]
-    public ContentResult Contact() => new ContentResult() { ContentType = "text/xml", Content = "<book><title>Harry Potter</title></book>" };
+    public ContentResult Contact() => Content("<book><title>Harry Potter</title></book>", "text/xml");
 }
