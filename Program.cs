@@ -8,8 +8,10 @@ app.Use(async (ctx, next) =>
     await next(ctx);
 });
 app.DoSomething();
+app.DoIt();
 app.Run(async (ctx) =>
 {
     await ctx.Response.WriteAsync("Third");
 });
+
 app.Run();
