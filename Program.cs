@@ -5,10 +5,10 @@ app.UseRouting();
 
 app.UseEndpoints(endpoints =>
 {
-    _ = endpoints.MapGet("first/{name=Ger}", async (ctx) =>
+    _ = endpoints.MapGet("first/{age:int:length(3,10)=6989}", async (ctx) =>
     {
-        var firstname = Convert.ToString(ctx.Request.RouteValues["name"]);
-        await ctx.Response.WriteAsync($"{firstname}");
+        var age = Convert.ToInt32(ctx.Request.RouteValues["age"]);
+        await ctx.Response.WriteAsync($"{age}");
     });
 });
 app.Run();
