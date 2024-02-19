@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "Tn4U0MxeqheqDtM8AWopZrpbgq+vvHznGcbO+fGCIeM=",
+  "Hash": "JZUBLBO2gTiUB+Pq+K3m07utHb5/Itdo4xhytILsljE=",
   "Source": "test",
   "BasePath": "_content/test",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "test\\wwwroot",
+      "Source": "test",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\test\\wwwroot\\",
+      "BasePath": "_content/test",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\test\\wwwroot\\some.json",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\test\\wwwroot\\",
+      "BasePath": "_content/test",
+      "RelativePath": "some.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\some.json"
+    },
+    {
+      "Identity": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\test\\wwwroot\\The Art Of Bit Manipulation.png",
+      "SourceId": "test",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Edewi\\Documents\\projects\\dotnet\\test\\wwwroot\\",
+      "BasePath": "_content/test",
+      "RelativePath": "The Art Of Bit Manipulation.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\The Art Of Bit Manipulation.png"
+    }
+  ]
 }
