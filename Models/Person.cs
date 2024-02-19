@@ -1,8 +1,8 @@
 public class Person
 {
-    public Person(Guid id, string name, int age)
+    public Person(string name, int age)
     {
-        Id = id;
+        Id = Guid.NewGuid();
         Name = name;
         Age = age;
     }
