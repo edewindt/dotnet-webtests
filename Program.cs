@@ -1,14 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
 var app = builder.Build();
-app.UseStaticFiles();
 app.UseRouting();
-
-app.UseEndpoints(endpoints =>
-{
-    _ = endpoints.MapGet("first/{age:int:length(3,10)=6989}", async (ctx) =>
-    {
-        var age = Convert.ToInt32(ctx.Request.RouteValues["age"]);
-        await ctx.Response.WriteAsync($"{age}");
-    });
-});
+app.MapControllers();
 app.Run();
