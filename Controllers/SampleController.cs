@@ -11,4 +11,6 @@ public class SampleController : Controller
 
     [Route("/contact")]
     public ContentResult Contact() => Content("<book><title>Harry Potter</title></book>", "text/xml");
+    [Route("person")]
+    public JsonResult Person() => Json(new Person(Guid.NewGuid(), "Elias", 21));
 }
