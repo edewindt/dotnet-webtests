@@ -13,4 +13,6 @@ public class SampleController : Controller
     public ContentResult Contact() => Content("<book><title>Harry Potter</title></book>", "text/xml");
     [Route("person")]
     public JsonResult Person() => Json(new Person(Guid.NewGuid(), "Elias", 21));
+    [Route("file")]
+    public VirtualFileResult FileDown() => File("/The Art Of Bit Manipulation.png", "image/png");
 }
