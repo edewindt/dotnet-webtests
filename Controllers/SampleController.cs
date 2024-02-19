@@ -4,15 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 public class SampleController : Controller
 {
     [Route("/")]
-    public ContentResult Index() => Content("<h1>Home PAGEO</h1>", "text/html");
+    public IActionResult Index() => Content("<h1>Home PAGEO</h1>", "text/html");
 
     [Route("/about")]
-    public ContentResult About() => Content("{\"About\":\"SkillIssue\"}", "text/plain");
+    public IActionResult About() => BadRequest("{\"About\":\"SkillIssue\"}");
 
     [Route("/contact")]
-    public ContentResult Contact() => Content("<book><title>Harry Potter</title></book>", "text/xml");
+    public IActionResult Contact() => Content("<book><title>Harry Potter</title></book>", "text/xml");
     [Route("person")]
-    public JsonResult Person() => Json(new Person(Guid.NewGuid(), "Elias", 21));
+    public IActionResult Person() => Json(new Person(Guid.NewGuid(), "Elias", 21));
     [Route("file")]
-    public VirtualFileResult FileDown() => File("/The Art Of Bit Manipulation.png", "image/png");
+    public IActionResult FileDown() => File("/The Art Of Bit Manipulation.png", "image/png");
 }
